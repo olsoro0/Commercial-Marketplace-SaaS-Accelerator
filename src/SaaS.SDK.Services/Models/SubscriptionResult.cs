@@ -236,5 +236,14 @@ namespace Microsoft.Marketplace.SaaS.SDK.Services.Models
         /// <summary>Gets or sets the name of the customer.</summary>
         /// <value>The name of the customer.</value>
         public string CustomerName { get; set; }
+
+
+        /// <summary>
+        /// Gets or sets a value indicating whether this instance is autorenew.
+        /// </summary>
+        /// <value>
+        ///   <c>true</c> if this instance is autorenew; otherwise, <c>false</c>.
+        /// </value>
+        public bool AutoRenew { get; set; }
     }
 }

@@ -47,6 +47,15 @@ namespace Microsoft.Marketplace.SaaS.SDK.Services.Models
         public int Quantity { get; set; }
 
         /// <summary>
+        /// Gets or sets the autorenew.
+        /// </summary>
+        /// <value>
+        /// The quantity.
+        /// </value>
+        [JsonPropertyName("autorenew")]
+        public int AutoRenew { get; set; }
+
+        /// <summary>
         /// Gets or sets the subscription identifier.
         /// </summary>
         /// <value>

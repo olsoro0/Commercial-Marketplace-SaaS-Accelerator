@@ -35,6 +35,7 @@ namespace Microsoft.Marketplace.SaaS.SDK.Services.Helpers
                 SaasSubscriptionStatus = (Models.SubscriptionStatusEnum)Enum.Parse(typeof(Models.SubscriptionStatusEnum), subscription.SaasSubscriptionStatus.ToString()),
                 PlanId = subscription.PlanId,
                 Quantity = subscription.Quantity ?? 0,
+                AutoRenew = subscription.AutoRenew ?? false,
                 Purchaser = new PurchaserResult()
                 {
                     EmailId = subscription.Purchaser.EmailId,

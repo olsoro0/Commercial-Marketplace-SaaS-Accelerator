@@ -411,6 +411,7 @@ namespace Microsoft.Marketplace.SaasKit.Client.DataAccess.Context
                     .IsUnicode(false);
 
                 entity.Property(e => e.Ampquantity).HasColumnName("AMPQuantity");
+                entity.Property(e => e.AmpAutoRenew).HasColumnName("AMPIsAutoRenew");
 
                 entity.Property(e => e.AmpsubscriptionId)
                     .HasColumnName("AMPSubscriptionId")

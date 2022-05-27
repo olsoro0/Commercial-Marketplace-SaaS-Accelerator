@@ -66,6 +66,7 @@ namespace Microsoft.Marketplace.SaaS.SDK.Services.Services
                 UserId = this.currentUserId,
                 PurchaserEmail = subscriptionDetail.Purchaser.EmailId,
                 PurchaserTenantId = subscriptionDetail.Purchaser.TenantId,
+                AmpAutoRenew = subscriptionDetail.AutoRenew
             };
             return this.subscriptionRepository.Save(newSubscription);
         }
@@ -150,6 +151,7 @@ namespace Microsoft.Marketplace.SaaS.SDK.Services.Services
                 SubscribeId = subscription.Id,
                 PlanId = string.IsNullOrEmpty(subscription.AmpplanId) ? string.Empty : subscription.AmpplanId,
                 Quantity = subscription.Ampquantity,
+                AutoRenew = subscription.AmpAutoRenew,
                 Name = subscription.Name,
                 SubscriptionStatus = this.GetSubscriptionStatus(subscription.SubscriptionStatus),
                 IsActiveSubscription = subscription.IsActive ?? false,
