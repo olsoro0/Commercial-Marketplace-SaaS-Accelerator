@@ -151,7 +151,7 @@ namespace Microsoft.Marketplace.SaaS.SDK.Services.Services
                 SubscribeId = subscription.Id,
                 PlanId = string.IsNullOrEmpty(subscription.AmpplanId) ? string.Empty : subscription.AmpplanId,
                 Quantity = subscription.Ampquantity,
-                AutoRenew = subscription.AmpAutoRenew,
+                AutoRenew = subscription.AmpAutoRenew ?? false,
                 Name = subscription.Name,
                 SubscriptionStatus = this.GetSubscriptionStatus(subscription.SubscriptionStatus),
                 IsActiveSubscription = subscription.IsActive ?? false,

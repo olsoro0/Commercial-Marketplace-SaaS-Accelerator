@@ -22,7 +22,7 @@ namespace Microsoft.Marketplace.SaasKit.Client.DataAccess.Entities
         public int? UserId { get; set; }
         public string Name { get; set; }
         public int Ampquantity { get; set; }
-        public bool AmpAutoRenew { get; set; }
+        public bool? AmpAutoRenew { get; set; }
         public string PurchaserEmail { get; set; }
         public Guid? PurchaserTenantId { get; set; }
 
